@@ -27,7 +27,6 @@ yarn-error.log
 !.vscode/launch.json
 !.vscode/extensions.json
 .history/*
-*/.history/*
 
 # Miscellaneous
 /.angular/cache
@@ -41,6 +40,3 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
-
-# Local Netlify folder
-.netlify
