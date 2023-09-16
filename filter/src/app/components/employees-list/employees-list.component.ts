@@ -16,7 +16,10 @@ export class EmployeesListComponent {
     { id: 4, name: 'Annie Wheel', position: 'Backend Developer', since: 2022, salary: 2650 }
   ]
   activeRadio = 'All'
-  getFrontentDevelopers(): number {
+  getAllDevelopers(): number {
+    return this.employeesList.length
+  }
+  getFrontendDevelopers(): number {
     return this.employeesList.filter(developer => developer.position === 'Frontend Developer').length
   }
 
@@ -28,5 +31,8 @@ export class EmployeesListComponent {
     return this.employeesList.filter(developer => developer.position === 'Fullstack Developer').length
   }
 
+  countSelectedFilterOnChange(newActiveRadio: string): void {
+    this.activeRadio = newActiveRadio
+  }
 
 }

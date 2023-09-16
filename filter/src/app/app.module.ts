@@ -4,13 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { EmployeesListComponent } from './components/employees-list/employees-list.component';
-import { CountEmpleadosComponent } from './components/employees-list/count-empleados/count-empleados.component';
+import { CountEmployeesComponent } from './components/employees-list/count-employees/count-employees.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeesListComponent,
-    CountEmpleadosComponent
+    CountEmployeesComponent
   ],
   imports: [
     BrowserModule,
