@@ -8,14 +8,14 @@ import { Employee } from 'src/app/models/employees';
 })
 export class EmployeesListComponent {
   employeesList: Employee[] = [
-    { id: 0, name: 'Lara', surname: 'Amadine', position: 'Frontend Developer', since: 2019, salary: 2800 },
-    { id: 1, name: 'Rodrigo', surname: 'Astro', position: 'Backend Developer', since: 2020, salary: 2750 },
-    { id: 2, name: 'Lucas', surname: 'Vinter', position: 'Frontend Developer', since: 2019, salary: 2800 },
-    { id: 3, name: 'Peter', surname: 'Pan', position: 'Fullstack Developer', since: 2022, salary: 2650 },
-    { id: 4, name: 'Nadia', surname: 'Martínez', position: 'Fullstack Developer', since: 2020, salary: 2750 },
-    { id: 4, name: 'Annie', surname: 'Wheel', position: 'Backend Developer', since: 2022, salary: 2650 }
+    { id: 0, name: 'Lara Amadine', position: 'Frontend Developer', since: 2019, salary: 2800 },
+    { id: 1, name: 'Rodrigo Astro', position: 'Backend Developer', since: 2020, salary: 2750 },
+    { id: 2, name: 'Lucas Vinter', position: 'Frontend Developer', since: 2019, salary: 2800 },
+    { id: 3, name: 'Peter Pan', position: 'Fullstack Developer', since: 2022, salary: 2650 },
+    { id: 4, name: 'Nadia Martínez', position: 'Fullstack Developer', since: 2020, salary: 2750 },
+    { id: 4, name: 'Annie Wheel', position: 'Backend Developer', since: 2022, salary: 2650 }
   ]
-
+  activeRadio = 'All'
   getFrontentDevelopers(): number {
     return this.employeesList.filter(developer => developer.position === 'Frontend Developer').length
   }
@@ -27,4 +27,6 @@ export class EmployeesListComponent {
   getFullstackDevelopers(): number {
     return this.employeesList.filter(developer => developer.position === 'Fullstack Developer').length
   }
+
+
 }
