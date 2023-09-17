@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-    @apply text-slate-200 bg-[#021320] bg-blue-700/80
+    @apply text-slate-200 bg-[#021320] bg-blue-800/80
 }
 
 h1 {
