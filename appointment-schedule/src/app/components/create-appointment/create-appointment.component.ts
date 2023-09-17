@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Datepicker, Input, initTE } from "tw-elements";
+
 
 @Component({
   selector: 'app-create-appointment',
@@ -6,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./create-appointment.component.css']
 })
 export class CreateAppointmentComponent {
+  ngOnInit() {
+    initTE({ Datepicker, Input }, { allowReinits: true });
 
+  }
 }
