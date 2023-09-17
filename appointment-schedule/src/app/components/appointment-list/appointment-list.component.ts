@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-appointment-list',
@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./appointment-list.component.css']
 })
 export class AppointmentListComponent {
+  @Input() appointmentsList: any
+  @Output() handleDeleteAppointment = new EventEmitter
 
+  deleteAppointment(index: number) {
+    this.handleDeleteAppointment.emit(index)
+  }
 }

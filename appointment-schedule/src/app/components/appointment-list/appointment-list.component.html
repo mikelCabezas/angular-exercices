@@ -1,1 +1,39 @@
-<p>appointment-list works!</p>
+<div class="row bg-slate-800 p-6 rounded-xl h-full">
+    <h3>Appointments list</h3>
+    <div class="list">
+       <p *ngIf="appointmentsList.length === 0">There is no appointments yet. Create one!</p>
+        <div class="container appointments mt-4">
+            <div *ngFor="let appointment of appointmentsList, let i = index" class="appointment bg-blue-600/80 py-2 px-4 rounded-xl mb-2 relative">
+                <div class="appointment__name">
+                    <p class="text-xl "><span class="font-bold">Pacient: </span>{{appointment.name}} {{appointment.lastName}}</p>
+                </div>
+                <div class="appointment__date flex flex-row gap-6">
+                    <p class="text-lg "><span class="font-bold">Hour: </span>{{appointment.time}}</p>
+                    <p class="text-lg "><span class="font-bold">Day: </span>{{appointment.date}}</p>
+                </div>
+                <div class="appointment__sympthoms">
+                    <p class="text-lg "> <span class="font-bold">Sympthoms: </span>{{appointment.sympthoms}}</p>
+                </div>
+                <div (click)="deleteAppointment(i)" class="delete absolute top-3 right-3 w-6 h-6 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                        <path fillRule="evenodd" d="M16.5 4.478v.227a48.816 48.816 0 013.878.512.75.75 0 11-.256 1.478l-.209-.035-1.005 13.07a3 3 0 01-2.991 2.77H8.084a3 3 0 01-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 01-.256-1.478A48.567 48.567 0 017.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 013.369 0c1.603.051 2.815 1.387 2.815 2.951zm-6.136-1.452a51.196 51.196 0 013.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 00-6 0v-.113c0-.794.609-1.428 1.364-1.452zm-.355 5.945a.75.75 0 10-1.5.058l.347 9a.75.75 0 101.499-.058l-.346-9zm5.48.058a.75.75 0 10-1.498-.058l-.347 9a.75.75 0 001.5.058l.345-9z" clipRule="evenodd" />
+                      </svg>
+                      
+                </div>
+            </div>
+            <!-- <div *ngFor="let appointment of appointmentsList" class="appointment">
+                <div class="appointment__name">
+                    <p class="text-lg"></p>
+                </div>
+                <div class="appointment__date flex flex-row gap-6">
+                    <p class="text-lg"></p>
+                    <p class="text-lg">{{appointment.date}}</p>
+                </div>
+                <div class="appointment__sympthoms">
+                    <p class="text-lg">{{appointment.date}}</p>
+                    <p class="text-lg">{{appointment.time}}</p>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>
