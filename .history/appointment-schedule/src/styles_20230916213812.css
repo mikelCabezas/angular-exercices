@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply text-zinc-200 bg-[#021320]
+}
+
+h1 {
+    @apply text-4xl font-bold
+}
+
+h2 {
+    @apply text-3xl font-bold
+}
+
+h3 {
+    @apply text-2xl font-bold
+}
+
+h4 {
+    @apply text-xl font-bold
+}
+
+h5 {
+    @apply text-lg font-bold
+}
+
+h6 {
+    @apply font-bold
+}
+
+.container {
+    @apply mx-auto
+}
+
+.table {
+    @apply border-spacing-y-2
+}
+
+.table tr {
+    @apply rounded-3xl
+}
+
+
+
+
+
+tr td:first-child,
+tr th:first-child {
+    @apply rounded-tl-3xl rounded-bl-3xl
+}
+
+tr td:last-child,
+tr th:last-child {
+    @apply rounded-tr-3xl rounded-br-3xl
+}

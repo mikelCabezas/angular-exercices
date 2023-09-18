@@ -1,0 +1,26 @@
+<div class="row bg-slate-800 p-6 rounded-xl h-full">
+    <h4>Appointments list</h4>
+    <div class="list">
+       <p *ngIf="appointmentsList.length === 0">There is no appointments yet. Create one!</p>
+        <div class="container appointments">
+            <div class="appointment">
+                <div class="appointment__name">
+                    <p class="text-lg">Mikel Cabezas</p>
+                </div>
+                <div class="appointment__date">
+                    <p class="text-lg">12/12/12</p>
+                    <p class="text-lg">12:00</p>
+                </div>
+            </div>
+            <!-- <div *ngFor="let appointment of appointmentsList" class="appointment">
+                <div class="appointment__name">
+                    <p class="text-lg">{{appointment.name}} {{appointment.lastName}}</p>
+                </div>
+                <div class="appointment__date">
+                    <p class="text-lg">{{appointment.date}}</p>
+                    <p class="text-lg">{{appointment.time}}</p>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>

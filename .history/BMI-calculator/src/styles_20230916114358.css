@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&family=VT323&display=swap');
+
+.column-6-container {
+    @apply col-span-6 bg-red-950 h-36 rounded-3xl flex flex-col justify-center items-center p-4
+}
+
+.column-12-container {
+    @apply p-4
+}
+
+body {
+    background-color: #021320;
+    color: #fff;
+    padding: 15px
+}

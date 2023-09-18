@@ -1,0 +1,15 @@
+<div class="main flex justify-center flex-col">
+    <div class="filter bg-blue-800  p-2">
+        <h1 class="text-center py-3">Appointments App</h1>
+    </div>
+    <div class="container">
+        <div class="row grid grid-cols-2 gap-4 mt-10">
+            <div class="column-6-container">
+                <app-create-appointment (newAppointment)="addAppointment($event)"/>
+            </div>
+            <div class="column-6-container">
+                <app-appointment-list [appointmentsList]="appointmentsList" (handleDeleteAppointment)="deleteAppointment($event)"/>
+            </div>
+        </div>
+    </div>
+</div>

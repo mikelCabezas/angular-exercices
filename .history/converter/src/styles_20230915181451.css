@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-image: url('./assets/sunset-beach.jpeg');
+    background-position: center bottom;
+}

@@ -1,0 +1,97 @@
+<div class="container">
+    <div class="row">
+        <div class="inputs">
+            <div class="content">
+                <!-- component -->
+                <div class="flex w-full justify-center">
+                    <div class="grid  grid-cols-4  gap-2 rounded-xl bg-purple-950 p-2">
+                        <div class="">
+                            <input
+                                type="radio"
+                                name="position"
+                                id="all"
+                                value="All"
+                                class="peer hidden"
+                                checked
+                            >
+                            <label for="all" class="block cursor-pointer select-none rounded-xl p-2 text-center peer-checked:bg-purple-600 ">All</label>
+                        </div>
+                        <div>
+                            <input
+                                type="radio"
+                                name="position"
+                                id="fullstack-developer"
+                                value="Fullstack Developer"
+                                class="peer hidden"
+                            >
+                            <label for="fullstack-developer" class="block cursor-pointer select-none rounded-xl p-2 text-center peer-checked:bg-purple-600 ">Fullstack Developer</label>
+                        </div>
+                        <div>
+                            <input
+                                type="radio"
+                                name="position"
+                                value="Frontend Developer"
+                                id="frontend-developer"
+                                class="peer hidden"
+                            >
+                            <label for="frontend-developer" class="block cursor-pointer select-none rounded-xl p-2 text-center peer-checked:bg-purple-600 ">Frontend Developer</label>
+                        </div>
+                        <div>
+                            <input
+                                type="radio"
+                                name="position"
+                                id="backend-developer"
+                                value="Backend Developer"
+                                class="peer hidden"
+                            >
+                            <label for="backend-developer" class="block cursor-pointer select-none rounded-xl p-2 text-center peer-checked:bg-purple-600 ">Backend Developer</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="employees">
+            <div class="content">
+                <!-- component -->
+                <div class="flex  justify-center min-h-screen bg-gray-900">
+                    <div class="col-span-12">
+                        <div class="overflow-auto lg:overflow-visible ">
+                            <table class="table text-gray-400 border-separate space-y-6 text-sm">
+                                <thead class="bg-gray-800 text-gray-500">
+                                    <tr>
+                                        <th class="py-3 px-6 ">Position</th>
+                                        <th class="py-3 px-6 text-center">Name</th>
+                                        <th class="py-3 px-6 text-center">Surname</th>
+                                        <th class="py-3 px-6 text-center">Working since</th>
+                                        <th class="py-3 px-6 text-center">Salary</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="bg-gray-800">
+                                        <td class="py-3 px-6 text-center">
+                                            Frontend Developer
+                                        </td>
+                                        <td class="py-3 px-6 text-center">
+                                            Lara
+                                        </td>
+                                        <td class="py-3 px-6 text-center font-bold">
+                                            Amandine
+                                        </td>
+                                        <td class="py-3 px-6 text-center">
+                                            2019
+                                        </td>
+                                        <td class="py-3 px-6 text-center">
+                                            2.800$
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

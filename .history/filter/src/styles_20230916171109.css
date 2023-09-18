@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-gradient-to-r from-violet-900 to-purple-900 text-zinc-200 p-4
+}
+
+h1 {
+    @apply text-4xl font-bold
+}
+
+h2 {
+    @apply text-3xl font-bold
+}
+
+h3 {
+    @apply text-2xl font-bold
+}
+
+h4 {
+    @apply text-xl font-bold
+}
+
+h5 {
+    @apply text-lg font-bold
+}
+
+h6 {
+    @apply font-bold
+}
+
+.container {
+    @apply mx-auto
+}
+
+.table {
+    @apply border-spacing-2
+}
+
+.table tr {
+    @apply rounded-3xl
+}
+
+
+
+
+
+tr td:nth-child(n+5),
+tr th:nth-child(n+5) {
+    @apply rounded-tl-3xl rounded-bl-3xl
+}
+
+tr td:last-child,
+tr th:last-child {
+    @apply rounded-tr-3xl rounded-br-3xl
+}
+
+tr td:nth-child(1),
+tr th:nth-child(1) {
+    border-radius: .625rem 0 0 .625rem;
+}

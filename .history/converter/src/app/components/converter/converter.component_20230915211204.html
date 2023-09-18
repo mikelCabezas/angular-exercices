@@ -1,0 +1,34 @@
+<div class="container mx-auto p-6 flex justify-center">
+    <div class="row w-3/5">
+        <div class="col px-5">
+            <div class="mb-6">
+                <label for="email" class="text-sm text-gray-200 font-bold">Quantity</label>
+                <input [(ngModel)]="quantity" (input)="converse()" type="number" placeholder="Quantity..." class="mt-2 flex h-12 w-full items-center justify-center rounded-xl border bg-[rgba(16,28,26,0.9)] p-3 text-sm outline-none border-gray-200 placeholder-gray-400 text-gray-200">
+            </div>
+        </div>
+        <div class="col px-5 mb-6">
+            <label for="currency" class="block mb-2 text-sm font-medium text-gray-200">Origin</label>
+            <select id="currency" placeholder="Choose a currency" class="text-sm rounded-xl block w-full p-2.5 bg-[rgba(13,24,23,0.8)] border-gray-200 border-[1px] placeholder-gray-400 text-gray-200 focus:white" [(ngModel)]="currency" (change)="converse()">
+                <option *ngFor="let singleCurrency of currencies">{{singleCurrency}}</option>
+               
+            </select>
+        </div>
+        <div class="col px-5">
+            <label for="conversion" class="block mb-2 text-sm font-medium text-gray-200">Origin</label>
+            <select id="conversion" placeholder="Choose a currency" class="text-sm rounded-xl block w-full p-2.5 bg-[rgba(13,24,23,0.8)] border-gray-200 border-[1px] placeholder-gray-200 text-gray-200 focus:white" [(ngModel)]="convertTo" (change)="converse()">
+                <option *ngFor="let singleCurrency of currencies">{{singleCurrency}}</option>
+            </select>
+        </div>
+        <div class="col px-5 text center">
+            <div>
+                <p>{{quantity}} {{currency}}</p>
+            </div>
+            <div>
+                <p>equals to</p>
+            </div>
+            <div>
+                <p>{{convertedQuantity}} {{convertTo}}</p>
+            </div>
+        </div>
+    </div>
+</div>

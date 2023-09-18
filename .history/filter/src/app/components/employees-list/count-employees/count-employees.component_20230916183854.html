@@ -1,0 +1,53 @@
+<div class="row">
+    <div class="filter bg-gradient-to-r from-violet-900 to-purple-900 p-2">
+        <div class="flex w-full justify-center">
+            <div class="grid  grid-cols-4  gap-2 rounded-full bg-purple-950 p-2">
+                <div class="filter-item">
+                    <input
+                        [(ngModel)]="activeRadio"
+                        type="radio"
+                        name="department"
+                        id="all"
+                        value="All"
+                        class="peer hidden"
+                        checked
+                    >
+                    <label for="all" class="block cursor-pointer select-none rounded-full py-1 px-2 text-center peer-checked:bg-purple-600 ">All ({{all}})</label>
+                </div>
+                <div class="filter-item">
+                    <input
+                        [(ngModel)]="activeRadio"
+                        type="radio"
+                        name="department"
+                        id="fullstack-developer"
+                        value="Fullstack Developer"
+                        class="peer hidden"
+                    >
+                    <label for="fullstack-developer" class="block cursor-pointer select-none rounded-full py-1 px-2 text-center peer-checked:bg-purple-600 ">Fullstack Developer ({{fullstackDevelopers}})</label>
+                </div>
+                <div class="filter-item">
+                    <input
+                        [(ngModel)]="activeRadio"
+                        type="radio"
+                        name="department"
+                        value="Frontend Developer"
+                        id="frontend-developer"
+                        class="peer hidden"
+                    >
+                    <label for="frontend-developer" class="block cursor-pointer select-none rounded-full py-1 px-2 text-center peer-checked:bg-purple-600 ">Frontend Developer ({{frontendDevelopers}})</label>
+                </div>
+                <div class="filter-item">
+                    <input
+                        [(ngModel)]="activeRadio"
+                        type="radio"
+                        name="department"
+                        id="backend-developer"
+                        value="Backend Developer"
+                        class="peer hidden"
+                    >
+                    <label for="backend-developer" class="block cursor-pointer select-none rounded-full py-1 px-2 text-center peer-checked:bg-purple-600 ">Backend Developer ({{backendDevelopers}})</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

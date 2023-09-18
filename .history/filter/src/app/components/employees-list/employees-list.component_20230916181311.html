@@ -1,0 +1,99 @@
+<div class="row">
+    <div class="filter bg-gradient-to-r from-violet-900 to-purple-900 p-2">
+        <div class="flex w-full justify-center">
+            <div class="grid  grid-cols-4  gap-2 rounded-xl bg-purple-950 p-2">
+                <div class="filter-item">
+                    <input
+                        [(ngModel)]="activeRadio"
+                        type="radio"
+                        name="department"
+                        id="all"
+                        value="All"
+                        class="peer hidden"
+                        checked
+                    >
+                    <label for="all" class="block cursor-pointer select-none rounded-xl p-2 text-center peer-checked:bg-purple-600 ">All ({{employeesList.length}})</label>
+                </div>
+                <div class="filter-item">
+                    <input
+                        [(ngModel)]="activeRadio"
+                        type="radio"
+                        name="department"
+                        id="fullstack-developer"
+                        value="Fullstack Developer"
+                        class="peer hidden"
+                    >
+                    <label for="fullstack-developer" class="block cursor-pointer select-none rounded-xl p-2 text-center peer-checked:bg-purple-600 ">Fullstack Developer ({{getFullstackDevelopers()}})</label>
+                </div>
+                <div class="filter-item">
+                    <input
+                        [(ngModel)]="activeRadio"
+                        type="radio"
+                        name="department"
+                        value="Frontend Developer"
+                        id="frontend-developer"
+                        class="peer hidden"
+                    >
+                    <label for="frontend-developer" class="block cursor-pointer select-none rounded-xl p-2 text-center peer-checked:bg-purple-600 ">Frontend Developer ({{getFrontentDevelopers()}})</label>
+                </div>
+                <div class="filter-item">
+                    <input
+                        [(ngModel)]="activeRadio"
+                        type="radio"
+                        name="department"
+                        id="backend-developer"
+                        value="Backend Developer"
+                        class="peer hidden"
+                    >
+                    <label for="backend-developer" class="block cursor-pointer select-none rounded-xl p-2 text-center peer-checked:bg-purple-600 ">Backend Developer ({{getBackendDevelopers()}})</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="employees">
+        <div class="flex justify-center min-h-screen bg-gray-900">
+            <div class="col-span-12">
+                <div class="overflow-auto lg:overflow-visible ">
+                    <table class="table text-gray-400 border-separate space-y-6 text-sm">
+                        <thead class="bg-gray-800 text-gray-500">
+                            <tr>
+                                <th class="py-3 px-5 text-left">ID</th>
+                                <th class="py-3 px-5 text-left">Name</th>
+                                <th class="py-3 px-5 text-left">Surname</th>
+                                <th class="py-3 px-5 text-left">Position</th>
+                                <th class="py-3 px-5 text-left">Since</th>
+                                <th class="py-3 px-5 text-left">Salary</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <ng-container *ngFor="let employee of employeesList">
+                            <tr *ngIf="activeRadio === 'All' || activeRadio === employee.position " class="bg-gray-800" >
+                                <td class="py-3 px-5 text-left">
+                                    {{employee.id}}
+                                </td>
+                                <td class="py-3 px-5 text-left">
+                                    {{employee.name}}
+                                </td>
+                                <td class="py-3 px-5 text-left">
+                                    {{employee.surname}}
+                                </td>
+                                <td class="py-3 px-5 text-left font-bold">
+                                    {{employee.position}}
+                                </td>
+                                <td class="py-3 px-5 text-left">
+                                    {{employee.since}}
+                                </td>
+                                <td class="py-3 px-5 text-left">
+                                    {{employee.salary | currency}}
+                                </td>
+                            </tr>
+                            </ng-container>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

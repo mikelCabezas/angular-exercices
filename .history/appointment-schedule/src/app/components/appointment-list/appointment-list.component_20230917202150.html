@@ -1,0 +1,36 @@
+<div class="row bg-slate-800 p-6 rounded-xl h-full">
+    <h4>Appointments list</h4>
+    <div class="list">
+       <p *ngIf="appointmentsList.length === 0">There is no appointments yet. Create one!</p>
+        <div class="container appointments mt-4">
+            <div class="appointment bg-blue-600/80 py-2 px-4 rounded-xl mb-2 relative">
+                <div class="appointment__name">
+                    <p class="text-xl "><span class="font-bold">Pacient: </span>Mikel Cabezas</p>
+                </div>
+                <div class="appointment__date flex flex-row gap-6">
+                    <p class="text-lg "><span class="font-bold">Hour: </span>12:00</p>
+                    <p class="text-lg "><span class="font-bold">Day: </span>12/12/12</p>
+                </div>
+                <div class="appointment__sympthoms">
+                    <p class="text-lg "> <span class="font-bold">Sympthoms: </span>bla ba lba bla bla lba</p>
+                </div>
+                <div class="delete absolute top-3 right-3 w-6 h-6 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#ffffff" className="w-6 h-6">   <path strokeLinecap="round" strokeLinejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" /> </svg>
+                </div>
+            </div>
+            <!-- <div *ngFor="let appointment of appointmentsList" class="appointment">
+                <div class="appointment__name">
+                    <p class="text-lg">{{appointment.name}} {{appointment.lastName}}</p>
+                </div>
+                <div class="appointment__date flex flex-row gap-6">
+                    <p class="text-lg">{{appointment.time}}</p>
+                    <p class="text-lg">{{appointment.date}}</p>
+                </div>
+                <div class="appointment__sympthoms">
+                    <p class="text-lg">{{appointment.date}}</p>
+                    <p class="text-lg">{{appointment.time}}</p>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>

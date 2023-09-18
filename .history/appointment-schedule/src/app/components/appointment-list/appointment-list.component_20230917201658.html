@@ -1,0 +1,33 @@
+<div class="row bg-slate-800 p-6 rounded-xl h-full">
+    <h4>Appointments list</h4>
+    <div class="list">
+       <p *ngIf="appointmentsList.length === 0">There is no appointments yet. Create one!</p>
+        <div class="container appointments mt-4">
+            <div class="appointment bg-slate-700 py-2 px-4 rounded-xl mb-2">
+                <div class="appointment__name">
+                    <p class="text-xl"><span class="font-bold">Pacient: </span>Mikel Cabezas</p>
+                </div>
+                <div class="appointment__date flex flex-row gap-6">
+                    <p class="text-lg"><span class="font-bold">Hour: </span>12:00</p>
+                    <p class="text-lg"><span class="font-bold">Day: </span>12/12/12</p>
+                </div>
+                <div class="appointment__sympthoms">
+                    <p class="text-lg"> <span class="font-bold">Sympthoms: </span>bla ba lba bla bla lba</p>
+                </div>
+            </div>
+            <!-- <div *ngFor="let appointment of appointmentsList" class="appointment">
+                <div class="appointment__name">
+                    <p class="text-lg">{{appointment.name}} {{appointment.lastName}}</p>
+                </div>
+                <div class="appointment__date flex flex-row gap-6">
+                    <p class="text-lg">{{appointment.time}}</p>
+                    <p class="text-lg">{{appointment.date}}</p>
+                </div>
+                <div class="appointment__sympthoms">
+                    <p class="text-lg">{{appointment.date}}</p>
+                    <p class="text-lg">{{appointment.time}}</p>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>

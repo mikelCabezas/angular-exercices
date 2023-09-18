@@ -1,0 +1,55 @@
+<div class="row min-h-screen max-w-2xl m-auto flex flex-col w-full gap-4 justify-center items-center">
+    <h2>BMI Calculator</h2>
+    <div class="grid grid-cols-12 gap-4 w-full">
+        <div class="column-6-container">
+            <span class="material-symbols-rounded text-[60px]"> female</span>
+            <p class="text-lg">Female</p>
+        </div>
+        <div class="column-6-container">
+            <span class="material-symbols-rounded text-[60px]"> male</span>
+            <p class="text-lg">Male</p>
+        </div>
+    </div>
+    <div class="grid grid-cols-12 gap-4 mx-auto w-full">
+        <div class="col-span-12 bg-red-950 h-36 rounded-3xl flex flex-row flex-wrap justify-center items-center p-4">
+            <div class="text-center">
+                <div class="text-lg w-full text-center">Height</div>
+                <div class="text-4xl font-bold flex flex-row items-end">
+                    {{ height }}
+                    <div class="text-lg font-normal">cm</div>
+                </div>
+            </div>
+            <input
+                id="default-range"
+                type="range"
+                value="50"
+                min="120"
+                max="220"
+                step="1"
+                (input)="onChangeHeight($event)"
+                class="w-full h-2 rounded-lg appearance-none cursor-pointer bg-red-200/50 accent-red-500 range-lg"
+            >
+        </div>
+    </div>
+    <div class="grid grid-cols-12 gap-4 mx-auto w-full">
+        <div class="column-6-container">
+            <p class="text-lg">Age</p>
+            <div class="text-4xl font-bold flex flex-row items-end">{{age}}</div>
+            <div class="flex flex-row mt-2 gap-2">
+                <span class="material-symbols-rounded bg-red-500/50 rounded-full cursor-pointer" (click)="age = age - 1"> remove</span>
+                <span class="material-symbols-rounded bg-red-500/50 rounded-full cursor-pointer" (click)="age = age + 1"> add</span>
+            </div>
+        </div>
+        <div class="column-6-container">
+            <p class="text-lg">Weight</p>
+            <div class="text-4xl font-bold flex flex-row items-end">{{weight}}</div>
+            <div class="flex flex-row mt-2 gap-2">
+                <span class="material-symbols-rounded bg-red-500/50 rounded-full cursor-pointer" (click)="weight = weight - 1"> remove</span>
+                <span class="material-symbols-rounded bg-red-500/50 rounded-full cursor-pointer" (click)="weight = weight + 1"> add</span>
+            </div>
+        </div>
+    </div>
+    <div class="grid grid-cols-12 gap-4 mx-auto w-full">
+        <div class="col-span-12 bg-red-600/75 px-6 py-4 rounded-full text-center uppercase font-bold text-lg">Calculate</div>
+    </div>
+</div>
